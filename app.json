@@ -27,7 +27,7 @@
             "description": "Your bot username list without '@' (Example: hot_girl_robot itz_queen_bot)",
             "required": true
         },
-       "CHANNEL_OR_GROUP_ID": {
+       "CHANNEL_ID": {
             "description": "Your channel's or group's Telegram id (Example: -1002032217136)",
             "required": true
         },
