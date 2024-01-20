@@ -23,7 +23,7 @@ async def main_venom():
     async with app:
             while True:
                 print("Checking...")
-                xxx_teletips = f"\n\n╭⎋  | **Real-Time Bot Status**"
+                xxx_teletips = f"\n\n╭⎋| **Real-Time Bot Status**"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -33,15 +33,15 @@ async def main_venom():
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n╭⎋   @{bot}\n        └ **Down** ❎"
+                            xxx_teletips += f"\n\n╭⎋ @{bot}\n        └ **Down** ❎"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(bot_admin_id), f"\n\n╭⎋  **Beep! Beep!! @{bot} is down** ❌")
+                                    await app.send_message(int(bot_admin_id), f"\n\n╭⎋ **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
                         else:
-                            xxx_teletips += f"\n\n╭⎋   @{bot}\n        └ **Alive** ✅"
+                            xxx_teletips += f"\n\n╭⎋ @{bot}\n        └ **Alive** ✅"
                             await app.read_chat_history(bot)
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
